@@ -202,7 +202,7 @@ h1 {
   border-radius: 30px;
   box-shadow: 0 0 10px #9f85fd;
 
-  animation: slide 15s linear infinite;
+  animation: slide 21s linear infinite;
   width: 100%;
 
 }
@@ -225,6 +225,12 @@ h1 {
 
 .animated-text .role:nth-child(5) {
   animation-delay: 12s;
+}
+.animated-text .role:nth-child(5) {
+  animation-delay: 15s;
+}
+.animated-text .role:nth-child(5) {
+  animation-delay: 18s;
 }
 
 @keyframes slide {
