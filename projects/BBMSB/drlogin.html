@@ -1,0 +1,89 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+body {
+	background-image:url(images1/background.jpg);
+	border: groove #9999FF;
+}
+a {color:#3300FF; text-decoration:none; height:20px;}
+a:hover { background-color:#FF0000; color:#FFFF33; text-decoration:blink; font-size:18px;}
+.style5 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-size: 24px;
+}
+</style>
+<title>Blood Bank</title>
+
+</head>
+
+<body>
+<table style="background-image:url(images1/bgtable.jpg); font-size:24px">
+<tr>
+<td>It is now </td>
+<td>&nbsp;</td>
+<td>
+<script type="text/javascript">
+<!--
+var currentTime = new Date()
+var month = currentTime.getMonth() + 1
+var day = currentTime.getDate()
+var year = currentTime.getFullYear()
+document.write(month + "/" + day + "/" + year)
+//-->
+</script>
+&nbsp;
+<script type="text/javascript">
+<!--
+var currentTime = new Date()
+var hours = currentTime.getHours()
+var minutes = currentTime.getMinutes()
+if (minutes < 10){
+minutes = "0" + minutes
+}
+document.write(hours + ":" + minutes + " ")
+if(hours > 11){
+document.write("PM")
+} else {
+document.write("AM")
+}
+//-->
+</script>
+</td></tr>
+</table>
+
+<center><h1>Bishoftu Blood Bank||Login Page<a href="homepage.html" title="Home">Home</a></center></h1></h1></center></h1></center>
+<form action="drlogin.php" method="post" target="content">
+<b><center></center></b>
+<br>
+<table align="center" width='800', height= '400' style="background-image:url(images1/bgtable.jpg border='1') ">
+<caption align="left" style="background-image:url(images1/bgt_top1.jpg) ">
+<fieldset align="left"><legend><h1>Login Page For Blood Donor or Blood Seeker:</h1></legend>
+<span class="style5" align="left" background-color:red> </span>
+
+<br>Your Email:
+	<input type="email" name="email" ><br>&nbsp; &nbsp; &nbsp;
+<br>Password:
+	<input type="password" name="password" ><br>&nbsp; &nbsp; &nbsp;
+
+<br>User Type: <select name="usertype"><option></option><br>
+      <option>Blood Donor</option>
+      <option>Blood Requester</option>
+</select><br>&nbsp; &nbsp; &nbsp; 
+
+
+<br>
+&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input type="submit" value="Login"  name="submit" style="height:50px;width:100px; color: blue; font-weight: bold;">
+
+</fieldset>
+</form>
+</table>
+<style type="text/css">
+.error {
+color: red;
+font-weight: bold;
+}
+</style>
+</body>
+</html>

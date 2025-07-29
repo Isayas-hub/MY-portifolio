@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Home</title>
+<script type="text/javascript">
+<!--
+function SwapImage()
+{
+   var doc=document, args=arguments;
+   doc.$imgSwaps = new Array();
+   for(var i=2; i<args.length; i+=2)
+   {
+      var elem=FindObject(args[i]);
+      if(elem)
+      {
+         doc.$imgSwaps[doc.$imgSwaps.length]=elem;
+         elem.$src=elem.src;
+         elem.src=args[i+1];
+      }
+   }
+}
+// -->
+</script>
+<script type="text/javascript">
+<!--
+function PreloadImages()
+{
+   var imageObj = new Image();
+   var images1 = new Array();
+   images1[0]="./images1/img.jpg";
+   images1[1]="./images1/img1.jpg";
+   images1[2]="./images1/img2.jpg";
+   images1[3]="./images1/img3.jpg";
+ images1[4]="./images1/img.jpg";
+  images1[5]="./images1/img1.jpg";
+  images1[6]="./images1/img2.jpg";
+   images1[7]="./images1/img3.jpg";
+   images1[8]="./images1/img.jpg";
+   images1[9]="./images1/img1.jpg";
+   for (var i=0; i<=9; i++)
+   {
+      imageObj.src = images1[i];
+   }
+}
+// -->
+</script>
+<script type="text/javascript">
+<!--
+function FindObject(id, doc)
+{
+   var child, elem;
+   if(!doc)
+      doc=document;
+   if(doc.getElementById)
+      elem=doc.getElementById(id);
+   else
+   if(doc.layers)
+      child=doc.layers;
+   else
+   if(doc.all)
+      elem=doc.all[id];
+   if(elem)
+      return elem;
+   if(doc.id==id || doc.name==id)
+      return doc;
+   if(doc.childNodes)
+      child=doc.childNodes;
+   if(child)
+   {
+      for(var i=0; i<child.length; i++)
+      {
+         elem=FindObject(id,child[i]);
+         if(elem)
+            return elem;
+      }
+   }
+   var frm=doc.forms;
+   if(frm)
+   {
+      for(var i=0; i<frm.length; i++)
+      {
+         var elems=frm[i].elements;
+         for(var j=0; j<elems.length; j++)
+         {
+            elem=FindObject(id,elems[i]);
+            if(elem) return elem;
+         }
+      }
+   }
+   return null;
+}
+// -->
+</script>
+<style type="text/css">
+img { behavior: url(Images/pngfix.htc); }
+.style1 {	font-family: "Comic Sans MS";
+	font-weight: bold;
+	font-size: 36px;
+}
+.style2 {color: #FF0000}
+</style>
+</head>
+<body bgcolor="#D6DBDF" text="yellow">
+<img src="images1/img.jpg" id="Banner1" width="750" height="153" style="position:absolute;left:18px;top:1px;width:1299px;height:150px;z-index:0">
+<div id="bv_Image1" style="overflow:hidden; position:absolute; left:5px; top:282px; z-index:1; height: 384px;" align="left">
+<img src="images1/img1.jpg" alt="" width="3008" height="372" border="0" align="top" id="images1" style="width:449px;height:411px;"></div>
+<div id="bv_NavigationBar2" style="position:absolute;left:100px;top:162px;width:830px;height:59px;z-index:1;" align="left">
+<style>
+/* (A) BLINKING KEYFRAMES */
+@keyframes blinkingB {
+  0% { color: black; }
+  100% { color: red; }
+}
+/* (B) ATTACH BLINKING KEYFRAMES TO TEXT */
+#demoB {
+  font-size: 1.3em; font-weight: 800;
+  animation: blinkingB 1s infinite;
+}
+</style>
+<p id="demoB" align="center">
+                         DONATE BLOOD,SAVE LIFE! |WOLISO BLOOD BANK MANAGEMENT SYSTEM 
+</p>
+ <div align="center" class="style1"><a href="im/home.html" title="Home">Home</a><span class="style2">|</span><a href="aboutus.html" title="About US">AboutUS</a><span class="style2">|</span><a href="contactus.html" title="Menu">ContactUs</a><span class="style2">|</span><a href="news.php" title="news">News</a><span class="style2">|</span><a href="donor-listh.php" title="About US">Donors</a><span class="style2">|</span><a href="donateform.html" title="About US">Donate</a><span class="style2">|</span><a href="commenthtml.html" title="Feedback">Feedback</a><span class="style2">|</span><a href="login.php" title="Gallery">Login</a></div>
+</div>
+<div id="bv_Text1" style="position:absolute;left:486px;top:324px;width:329px;height:405px;z-index:1;" align="justify">
+<font style="font-size:21px" color="#000000" face="Comic Sans MS"><b>&nbsp;&nbsp;&nbsp;&nbsp; Blood is the main important thing for human life, if you donate blood it means that you are saving somebodies life. <h3>Donate blood,Save Life</h3>.This is Blood Bank Management Systems for Bishoftu, by using this system you can donate blood and save life.Don't forget that who need blood may be:Your mother,Your father,Your brother,Your sister, or any of your relatives! <br>
+</b></font><font style="font-size:10px" color="#000000" face="Comic Sans MS"> </font></div>
+<div id="bv_Image2" style="overflow:hidden; position:absolute; left:952px; top:287px; z-index:4; width: 387px; height: 398px;" align="left">
+<img src="images1/img2.jpg" alt="" width="360" height="235" border="0" align="top" id="Image2" style="width:390px;height:381px;"></div>
+<div id="bv_Image4" style="overflow:hidden; position:absolute; left:15px; top:837px; z-index:5; width: 1348px;" align="left"><img src="images1/img1.jpg" alt="" width="1796" height="24" border="0" align="top" id="Image4" style="width:1307px;height:24px;"></div>
+</body>
+</html>

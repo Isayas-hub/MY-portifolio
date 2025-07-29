@@ -1,0 +1,93 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+body {
+	background-image:url(images1/background.jpg);
+	border: groove #9999FF;
+}
+a {color:#3300FF; text-decoration:none; height:20px;}
+a:hover { background-color:#FF0000; color:#FFFF33; text-decoration:blink; font-size:18px;}
+.style5 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-size: 24px;
+}
+</style>
+<title>User</title>
+
+
+
+
+</head>
+
+<body>
+
+<table style="background-image:url(images1/bgtable.jpg); font-size:24px">
+<tr>
+<td>It is now </td>
+<td>&nbsp;</td>
+<td>
+<script type="text/javascript">
+<!--
+var currentTime = new Date()
+var month = currentTime.getMonth() + 1
+var day = currentTime.getDate()
+var year = currentTime.getFullYear()
+document.write(month + "/" + day + "/" + year)
+//-->
+</script>
+&nbsp;
+<script type="text/javascript">
+<!--
+var currentTime = new Date()
+var hours = currentTime.getHours()
+var minutes = currentTime.getMinutes()
+if (minutes < 10){
+minutes = "0" + minutes
+}
+document.write(hours + ":" + minutes + " ")
+if(hours > 11){
+document.write("PM")
+} else {
+document.write("AM")
+}
+//-->
+</script>
+</td></tr>
+</table>
+
+<h1><center>Appointment Page|
+<a href="index.php" title="Home">Home</a></center></h1>
+<hr>
+<form action="appointment.php" method="post" target="content">
+
+<b><center></center></b>
+<br>
+<table align="center" style="background-image:url(images1/bgtable.jpg) ">
+<caption align="center" style="background-image:url(images1/leftmenu.jpg) ">
+<span class="style5">Appointment Information: </span> 
+</caption>
+
+<td>&nbsp; &nbsp; &nbsp; <br><b>Your Email Address:</b><input type="text" name="email"></td></tr>
+
+<tr><td>&nbsp; &nbsp; &nbsp; <br><b>Date of this Message is written:</b><input type="date" name="message_date"></td></tr>
+&nbsp; &nbsp; &nbsp;
+<br><tr><td>&nbsp; &nbsp; &nbsp; <br><b>Date of  Your Appointment:</b><input type="date" name="assigned_date"></td></tr>
+<tr><td>&nbsp;</td></tr>&nbsp; &nbsp; &nbsp;
+<tr><td>&nbsp; &nbsp; &nbsp; <textarea name="feedback" cols="50" rows="8" id="comment" style="text-align:justify ">Type your Detail here...</textarea>&nbsp; &nbsp; &nbsp; <span id="feedbackerror" class="error"  ></span>
+<tr><td>&nbsp; &nbsp; &nbsp; <input type="submit" value="Post/Submit" name="submit">
+<tr><td>&nbsp;</td></tr>
+</table>
+</form>
+</form></td></tr>
+
+<hr>
+<style type="text/css">
+.error {
+color: red;
+font-weight: bold;
+}
+</style>
+</body>
+</html>

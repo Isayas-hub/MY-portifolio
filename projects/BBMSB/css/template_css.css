@@ -1,0 +1,267 @@
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color:#484848;
+	background: white;
+	font-family: Times New Roma;
+	line-height: 135%;
+}
+
+body#bd {
+background-image:url(images/sh01.jpg);
+background-repeat:repeat-x;
+background-color: #ff9900;
+}
+
+
+a {
+	color: #F85703;
+	text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+	color: #F85703;
+	text-decoration: none;
+}
+
+p {
+	margin: 5px 0 15px;
+}
+
+
+
+/* MODULE
+--------------------------------------------------------- */
+/* Left Module Style */
+div.moduletable h3 {
+	margin: 0 -12px 5px;
+	padding: 6px;
+	border-top: 2px solid #EFEFEF;
+	border-bottom: 3px solid black;
+	font-size: 1.3em;
+	
+	line-height: normal;
+}
+
+div.moduletable {
+	padding: 0 12px 8px;
+	margin: 0;
+	clear: both;
+	border-right: 3px solid #37C2DE;
+}
+
+/* Right Module Style */
+div.module h3 {
+	margin: 0 -3px 5px;
+	padding: 2px;
+	//border-top: 3px solid #EFEFEF;
+	border-bottom: 3px solid black;
+	font-size: 1em;
+}
+
+div.module {
+	margin-bottom: 5px;
+	padding: 0;
+	float: left;
+	clear: both;
+	width: 100%;
+	border-left: 3px solid #37C2DE;
+	background: #F2F2F2;/* Right Module color */
+}
+
+
+.article_seperator {
+	display: block;
+	background: url(images/sep2.jpg) repeat-x center;
+	height: 20px;
+}
+
+#ja-leftcol .article_seperator, #ja-rightcol .article_seperator {
+	display: none;
+}
+
+
+
+a.readon {
+	float: right;
+	padding: 1px 5px 1px 22px;
+	border-top: 1px solid #DDDDDD;
+	border-right: 1px solid #EFEFEF;
+	border-bottom: 1px solid #EFEFEF;
+	border-left: 1px solid #DDDDDD;
+	display: block;
+	background: no-repeat 5% 50% #F2F2F2;/*read more color*/
+	color: #484848;
+	text-transform: lowercase;
+	text-decoration: none;
+}
+
+a.readon:hover, a.readon:active, a.readon:focus {
+	color: #F85703;
+	background: url(images/bullet-title2.gif) no-repeat 5% 50% #FFFFFF;
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+/* MAIN LAYOUT DIVS
+--------------------------------------------------------- */
+#ja-wrapper {
+	width: 950px;
+	margin: 0 auto;
+	padding-left: 8px;
+	background: url(images/sh01.jpg) repeat-y top left #FFFFFF;
+	text-align: center;
+}
+
+.wide #ja-wrapper {
+	width: 950px;
+}
+
+.auto #ja-wrapper {
+	width: 90%;
+}
+
+#ja-wrapper-inner {
+	padding-right: 8px;
+	background: url(images/sh01.jpg) repeat-y top right #FFFFFF;
+	text-align: left;
+	height:1465px;
+}
+#ja-contentwrap {
+	background:#ffffff;/* center color */;
+}
+
+#ja-content {
+	padding: 0 20px 15px;
+	margin: 0;
+	clear: both;
+	display: block;
+	min-height: 300px;
+}
+
+/* HEADER
+--------------------------------------------------------- */
+
+#ja-header {
+    
+	height: 110px;/*height of menu bar*/
+	position: relative;
+}
+
+
+#ja-search {
+	position: absolute;
+	top: 40px;
+	right: 4px;
+}
+
+#ja-search div.search {
+	padding-left: 18px;
+	background: url(images/icon-search.gif) no-repeat center left;
+	width: auto;
+}
+
+#ja-search .inputbox {
+	width: 200px;
+	padding-left: 5px;
+	border: 1px solid #F85703;
+	background: url(images/stripe2.gif) #EFEFEF;
+}
+
+/* MAIN NAVIGATION
+--------------------------------------------------------- */
+
+
+.ja-mainnavshadow {
+	clear: both;
+	padding: 1px 0 2px;
+	background:black;// url(images/mainnav-bg.gif) repeat-x top;
+}
+
+/* Default Joomla! Menu */
+a.mainlevel {
+	padding: 3px 3px 5px 3px;
+	width: 98%;
+	display: block;
+	background: url(images/a-mainlevel-bg.gif) no-repeat bottom right;
+	color: #0066cc;
+	text-decoration: none;
+}
+
+a.mainlevel:hover,
+a.mainlevel:active,
+a.mainlevel:focus {
+	color: black;
+	background: #F5F10A;
+	text-decoration: none;
+}
+a.sublevel:hover,
+a.sublevel:active,
+a.sublevel:focus {
+	color: black;
+	background:#F5F10A no-repeat 2% 50%;
+	text-decoration: none;
+}
+
+
+/* PATHWAY
+---------------------------------------------------------*/
+
+/* CONTENT COLUMN
+--------------------------------------------------------- */
+
+#ja-mainbody, #ja-mainbody-fr {
+	float: right;
+	width: 82%;
+}
+
+#ja-mainbody #ja-contentwrap {
+	float: left;
+	width: 75%;
+}
+
+/* LEFT COLUMN + RIGHT COLUMN
+--------------------------------------------------------- */
+#ja-leftcol {
+	float: left;
+	width: 18%;
+}
+
+#ja-rightcol {
+	float: right;
+	
+	width: 25%;
+	overflow: hidden;
+}
+
+/* FOOTER
+--------------------------------------------------------- */
+#ja-footerwrap {
+	clear: both;
+	padding: 17px 12px 10px;
+	background: url(images/footer-bg.gif) repeat-x top #DDDDDD;
+	color: #999999;
+}
+
+#ja-footer {
+	height: 35px;
+	overflow: hidden;
+	position: relative;
+}
+
+#ja-bottomline {
+	float: left;
+	margin: 0;
+	display: block;
+	padding-left: 15px;
+}
+

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: pink;
+}
+.container {
+    padding: 20px;
+  background-color: lightblue;
+}
+input[type=text], input[type=password], textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: orange;
+  outline: none;
+}
+ div {
+            padding: 10px 0;
+         }
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+.registerbtn:hover {
+  opacity: 1;
+}
+</style>
+</head>
+<body>
+<form action="regrequest.php" name="submit" method="post" >
+  <div class="container">
+  <center>  <h1>BBMSB||Registration Form to Request Blood<a href="homepage.html" title="Home">Go to Home</a></center></h1></h1></center></h1></center>
+  <hr>
+  <label> Firstname </label> 
+<input type="text" name="firstname" placeholder= "Firstname"  pattern="[a-z,A-Z]+" maxlength="20" required /> 
+<label> Middlename: </label> 
+<input type="text" name="middlename" placeholder="Middlename"  maxlength="20" required /> 
+<label> Lastname: </label>  
+<input type="text" name="lastname" placeholder="Lastname"  maxlength="20" required ='true'/> 
+<label> Woreda/city: </label>  
+<input type="text" name="woreda" placeholder="woreda"  maxlength="20" required='true' /> 
+<label> kebele: </label>  
+<input type="text" name="kebele" placeholder="kebele"  maxlength="20" required='true' /> 
+<div>
+<label> 
+Blood :
+</label> 
+<select name="bloodtype">
+<option value="Course">Blood Type</option>
+<option value="A">A</option>
+<option value="B">B</option>
+<option value="AB.Tech">AB</option>
+<option value="O">O</option>
+<option value="A+">A+</option>
+<option value="A-">A-</option>
+<option value="B+">B+</option>
+<option value="B-">B-</option>
+<option value="AB+">AB+</option>
+<option value="AB-">AB-</option>
+<option value="O+">O+</option>
+<option value="O-">O-</option>
+</select>&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp
+<label> 
+Gender :
+</label>
+<input type="radio" value="Male" name="gender" checked > Male 
+<input type="radio" value="Female" name="gender"> Female 
+<input type="radio" value="Other" name="gender"> Other
+
+</div>
+<label> 
+Age :
+</label>
+<input type="text" name="age" placeholder="Age" maxlength="2" required='true'> 
+<label> 
+Phone :
+</label>
+<input type="text" name="phone" placeholder="phone no." maxlength="10" pattern="[0-9]+" required='true'> 
+<label>
+Email :
+</label>
+<input type="text" name="email" placeholder="Email" maxlength="50" required='true'> <br>
+
+<label>
+Volume in ml :
+</label>
+<input type="text" name="volume" placeholder="volume in ml:e.g. 330" maxlength="50" required='true'> 
+ &nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp
+<input type="submit" name="submit" value="submit" size="20" onclick="validate()">&nbsp;&nbsp;
+<tr><td>&nbsp; &nbsp; &nbsp; 
+<input type="reset" value="Clear"></td>
+</form>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<html>
+<head>
+
+<title>View Appointment Information</title>
+
+<style type="text/css">
+.button {
+    padding:3px 0 5px 0;
+    width:75px;
+    height:25px;
+    border: none;
+    background-color:#949e7c;
+    font-weight:bold;
+    cursor:pointer;
+    color: blue;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.button:hover {
+    background-color:green;
+    color: white;
+}
+</style>
+</head>
+<body bgcolor="#ddeeaa"><br><br><br><br><br>
+<table border="0" align="center" cellpadding="4" cellspacing="15">
+<caption align="center"><h3>Choose Search Type:</h3></caption>
+<form action="searchappointment.php" method="post">
+<tr>
+<td>
+<select name="searchtype">
+<option value="firstname">First Name</option>
+<option value="lastname">Last Name</option>
+<option value="age">Email</option>
+<option value="sex">sex</option>
+<option value="id">ID No</option>
+<option value="patient_type">Patient Type</option>
+<option value="room_number">Room Number</option>
+<option value="bed_number">Bed Number</option>
+<option value="entering_date">Entering Date</option>
+<option value="leaving_date">Leaving Date</option>
+<td></td>
+</select></td>
+<td>
+Enter Search Term:
+
+<input name="searchterm" type="text" required>
+</td></tr>
+<tr><td></td></tr><tr><td></td></tr><tr>
+<td></td><td>
+<input type="submit" value="Search" class="button">
+</td>
+<td>
+<input type="reset" value="clear" class="button">
+</td>
+</tr>
+</form>
+</table>
+
+
+</body>
+</html>

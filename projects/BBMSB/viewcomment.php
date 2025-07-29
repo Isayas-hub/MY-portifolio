@@ -1,0 +1,127 @@
+<?php include('db_connect.php');?>                   
+<div class="container-fluid">
+	<div class="col-lg-12">
+		<div class="row mb-4 mt-4">
+			<div class="col-md-12">	
+			</div>
+		</div>
+		<div class="row">
+			<!-- FORM Panel -->
+			<!-- Table Panel -->
+			<div class="col-md-12">
+				<div class="card">
+					<div class="card-header">
+						<b>List of Comments by users</b>
+						<span class="float:right"><a class="btn btn-primary btn-block btn-sm col-sm-2 float-right" href="javascript:void(0)" id="new_announce">
+					
+				</a></span>
+					</div>
+					<div class="card-body">
+						<table class="table table-condensed table-bordered table-hover">
+							<thead>
+								<tr>
+									<th class="text-center">#</th>
+									<th class="">ID</th>
+									<th class="">First Name</th>
+									<th class="">Last Name</th>
+									<th class="">User Type</th>
+									<th class="">Email</th>
+									<th class="">Comments</th>
+									<th class="text-center">Action</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php 
+									$i = 1;
+								$comment = $conn->query("SELECT * FROM comment order by id asc ");
+								while($row=$comment->fetch_assoc()):
+                      							
+								?>
+								<tr>
+									<td class="text-center"><?php echo $i++ ?></td>
+<td class="">
+										 <p> <b><?php echo ucwords($row['id']) ?></b></p>
+									</td>
+										
+									<td class="">
+										 <p> <b><?php echo ucwords($row['firstname']) ?></b></p>
+									</td>
+									<td class="">
+										 <p> <b><?php echo ucwords($row['lastname']) ?></b></p>
+									</td>
+									<td class="">
+										 <p> <b><?php echo $row['usertype'] ?></b></p>
+									</td>
+									<td class="">
+										 <p> <b><?php echo $row['email']; ?></b></p>
+									</td>
+									<td class="">
+										 <p> <b><?php echo $row['feedback']; ?></b></p>
+									</td>
+								
+									
+									<td class="text-center">
+										<a href="answer_commenthtml.html" title="Home">Respond</a>
+ 										
+										<button class="btn btn-sm btn-outline-danger delete_viewcomment" type="button" data-id="<?php echo $row['id'] ?>">Delete</button>
+									</td>
+								</tr>
+								<?php endwhile; ?>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<!-- Table Panel -->
+		</div>
+	</div>	
+
+</div>
+<style>
+	
+	td{
+		vertical-align: middle !important;
+	}
+	td p{
+		margin: unset
+	}
+	img{
+		max-width:100px;
+		max-height: :150px;
+	}
+</style>
+<script>
+	$(document).ready(function(){
+		$('table').dataTable()
+	})
+	
+	$('#new_announce').click(function(){
+		uni_modal("New Announcement","manage_announce.php","mid-large")
+		
+	})
+	$('.edit_viewcomment').click(function(){
+		uni_modal("Manage announce Details","manage_viewcomment.php?id="+$(this).attr('data-id'),"mid-large")
+		
+	})
+	$('.delete_viewcomment').click(function(){
+		_conf("Are you sure to delete this Announcement?","delete_viewcomment",[$(this).attr('data-id')])
+	})
+	
+	function delete_viewcomment($id){
+		start_load()
+		$.ajax({
+			url:'ajax.php?action=delete_viewcomment',
+			method:'POST',
+			data:{id:$id},
+			success:function(resp){
+				if(resp==1){
+					alert_toast("Data successfully deleted",'success')
+					setTimeout(function(){
+						location.reload()
+					},1500)
+
+				}
+			}
+		})
+	}
+</script>

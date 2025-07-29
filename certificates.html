@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title> Isayas Wakgari's Certificates</title>
+<BODY bgcolor="#CCFFFF">
+<body  TEXT=#ccccff LINK=RED VLINK=RED>
+<style type="text/css">
+body {background-attachment:fixed;
+background-image:url(images/background.jpg);}
+</style>
+<body onLoad="runSlideShow()">
+<script>
+var slideShowSpeed = 10000
+var crossFadeDuration = 3
+var Pic = new Array()
+Pic[0] = ' cisco.jpg'
+Pic[1] = ' capp.jpg'
+Pic[2] = ' datasc.jpg'
+Pic[3] = ' digita.jpg'
+Pic[4] = ' eng.jpg'
+Pic[5] = ' hdp.jpg'
+Pic[6] = ' python.jpg'
+Pic[7] = ' softwaretesting.jpg'
+Pic[8] = ' softwaretesting.jpg'
+var t
+var j = 0
+var p = Pic.length
+var preLoad = new Array()
+for (i = 0; i < p; i++){
+   preLoad[i] = new Image()
+   preLoad[i].src = Pic[i]
+}
+function runSlideShow(){
+   if (document.all){
+   document.images.SlideShow.style.filter="blendTrans(duration=2)"
+      document.images.SlideShow.style.filter="blendTrans(duration=crossFadeDuration)"
+      document.images.SlideShow.filters.blendTrans.Apply()
+      }
+   document.images.SlideShow.src = preLoad[j].src
+   if (document.all){
+      document.images.SlideShow.filters.blendTrans.Play()
+   }
+   j = j + 1
+   if (j > (p-1)) j=0
+   t = setTimeout('runSlideShow()', slideShowSpeed)
+}
+</script>
+<HEAD>
+<p align="center"><font size="5" color=#000000><strong>Certificates</strong><small><small><hr>
+
+ <br><p><center>
+<font face="arial, helvetica" size="1" color=red>
+<table>
+<tr>
+<td id="img" height=100 width=250>
+<img src="E:\My Portfolio Website/My Portfolio Website/certificates/softwaretesting.jpg" name='SlideShow' width=1200 height=400 align="absmiddle"></td>
+</tr>
+</table> 
+<hr>
+</body>
+</html>
